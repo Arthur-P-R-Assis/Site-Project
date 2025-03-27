@@ -1,16 +1,22 @@
 <script>
-  export default {
-    data() {
-      return {
-        menuAberto: false
-      };
-    },
-    methods: {
-      toggleMenu() {
-        this.menuAberto = !this.menuAberto;
-      }
+export default {
+  data() {
+    return {
+      imageUrl1: "https://raw.githubusercontent.com/Arthur-P-R-Assis/Site-Project/refs/heads/main/IMAGES/blusa-feminina.jpg",
+      imageUrl2: "https://raw.githubusercontent.com/Arthur-P-R-Assis/Site-Project/refs/heads/main/IMAGES/istockphoto-173239968-612x612.jpg",
+      imageUrl3: "https://raw.githubusercontent.com/Arthur-P-R-Assis/Site-Project/refs/heads/main/IMAGES/istockphoto-483960103-612x612.jpg",
+      imageUrl4:"https://raw.githubusercontent.com/Arthur-P-R-Assis/Site-Project/refs/heads/main/IMAGES/istockphoto-1332758692-612x612.jpg",
+      imageUrl5:"https://raw.githubusercontent.com/Arthur-P-R-Assis/Site-Project/refs/heads/main/IMAGES/71dSGi4xSvL.jpg",
+      imageUrl6:"https://raw.githubusercontent.com/Arthur-P-R-Assis/Site-Project/refs/heads/main/IMAGES/23259012_01.jpg",
+      menuAberto: false
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuAberto = !this.menuAberto;
     }
-  };
+  }
+};
 </script>
 
 <template>
@@ -51,6 +57,41 @@
     </div>
 
     <main>
+      <div class="roupas-cima">
+        <div class="roupa-item">
+          <img :src="imageUrl1" alt="Blusa Feminina" class="roupass"/>
+          <p class="nome-imagem">Blusa Feminina</p>
+          <p class="nome-imagem">R$34,90</p>
+        </div>
+        <div class="roupa-item">
+          <img :src="imageUrl3" alt="Camisa Preta" class="roupass"/>
+          <p class="nome-imagem">Camisa Preta</p>
+          <p class="nome-imagem">R$29,90</p>
+        </div>
+        <div class="roupa-item">
+          <img :src="imageUrl2" alt="Calça Jeans" class="roupass"/>
+          <p class="nome-imagem">Calça Jeans</p>
+          <p class="nome-imagem">R$119,90</p>
+        </div>
+      </div>
+      <div class="roupas-baixo">
+        <div class="roupa-item">
+          <img :src="imageUrl6" alt="Salto Alto" class="roupass"/>
+          <p class="nome-imagem">Salto Alto</p>
+          <p class="nome-imagem">R$229,90</p>
+        </div>
+        <div class="roupa-item">
+          <img :src="imageUrl5" alt="Tênis" class="roupass" />
+          <p class="nome-imagem">Tênis</p>
+          <p class="nome-imagem">R$144,90</p>
+        </div>
+        <div class="roupa-item">
+          <img :src="imageUrl4" alt="Short" class="roupass"/>
+          <p class="nome-imagem">Short</p>
+          <p class="nome-imagem">R$44,90</p>
+        </div>
+
+      </div>
     </main>
 
     <footer>
@@ -64,12 +105,59 @@
 </template>
 
 <style>
-
   body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
   }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 70px;
+  }
+
+  .roupas-cima{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    gap:40px;
+  }
+
+  .roupas-baixo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    gap:40px;
+  }
+
+  .roupass{
+    border: 2px solid black;
+    border-radius: 8px;
+  }
+
+  .nome-imagem {
+    font-size: 14px;
+    color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 8px;
+    font-weight: bold;
+  }
+
+  .roupa-item:hover{
+    transform: scale(1.15);
+    cursor:pointer;
+  }
+
+  img {
+  width: 150px;
+  height: 150px; 
+  }
+
   .container{
     display:flex;
     flex-direction: column;
@@ -123,7 +211,6 @@
     transform: scale(1.05);
   }
 
-
   .bi-list{
     width: 40px;
     height: 40px;
@@ -144,7 +231,7 @@
     fill:white;
   }
 
-   .botao-perfil{
+  .botao-perfil{
     border:none;
     background-color: black;
     cursor: pointer;
@@ -160,7 +247,7 @@
     fill:white;
   }
 
-    footer{
+  footer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,17 +298,19 @@
   }
 
   .menu ul li {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     width: 100%;
     border-bottom: 1px solid white; /* Para separação entre os itens */
   }
 
+  .menu ul li:hover{
+    transform: scale(1.05);
+  }
 
   .menu ul li:hover {
     background-color: #444;
     cursor: pointer;
   }
-
-
 </style>
