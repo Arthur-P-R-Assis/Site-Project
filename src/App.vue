@@ -115,7 +115,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 70px;
+    gap: 20px;
   }
 
   .roupas-cima{
@@ -123,7 +123,7 @@ export default {
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
-    gap:40px;
+    gap:20px;
   }
 
   .roupas-baixo{
@@ -131,7 +131,7 @@ export default {
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
-    gap:40px;
+    gap:20px;
   }
 
   .roupass{
